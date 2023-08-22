@@ -10,8 +10,15 @@ public class Area {
 
         double userRadius = input.nextDouble();
 
+        while (userRadius < 0) {
+            System.out.println("Please enter a positive number");
+             userRadius = input.nextDouble();
+        }
+
         double areaOfCircle = Circle.getArea(userRadius);
 
         System.out.println("The area of a circle of radius " + userRadius + " is: " + areaOfCircle);
+
+        input.close();
     }
 }
